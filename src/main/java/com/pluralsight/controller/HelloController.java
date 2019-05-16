@@ -7,10 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HelloController {
 
-		@RequestMapping(value="greeting")
+		@RequestMapping(value="/greeting")
 		public String sayHello(Model model) {
-			System.out.println("greeting");
-			model.addAttribute("greeting", "Hello from Controller");
+			model.addAttribute("greeting", "Hello from Controller test");
 			return "hello";
 		}
 }
