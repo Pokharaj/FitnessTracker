@@ -6,10 +6,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Minutes Page</title>
+<title>Add Minutes</title>
 </head>
 <body>
 	<h1>Add Minutes Exercised</h1>
+	
+	Language: <a href="?language=en">English</a> | <a href="?language=es">Spanish</a>
+	
 	<form:form modelAttribute="exercise">
 		<table>
 			<tr>
@@ -22,5 +25,7 @@
 			</tr>
 		</table>
 	</form:form>
+	
+	<h1>Out today's goal is: ${ goal.minutes }</h1>
 </body>
 </html>
