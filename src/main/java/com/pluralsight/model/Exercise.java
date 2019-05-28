@@ -1,5 +1,6 @@
 package com.pluralsight.model;
 
+<<<<<<< HEAD
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,6 +16,15 @@ public class Exercise {
 	@GeneratedValue
 	private Long id;
 	
+=======
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Range;
+
+
+public class Exercise {
+	
+>>>>>>> 4cba2732c61bb05c116c5bed0041948dacaf1fba
 	@Range(min = 1, max = 120)
 	private int minutes;
 
@@ -36,6 +46,17 @@ public class Exercise {
 		return id;
 	}
 	
+	@NotNull
+	private String activity;
+
+	public String getActivity() {
+		return activity;
+	}
+
+	public void setActivity(String activity) {
+		this.activity = activity;
+	}
+
 	public int getMinutes() {
 		return minutes;
 	}

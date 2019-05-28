@@ -21,9 +21,12 @@ import com.pluralsight.service.GoalService;
 @SessionAttributes("goal")
 public class GoalController {
 
+<<<<<<< HEAD
 	@Autowired
 	private GoalService goalService;
 	
+=======
+>>>>>>> 4cba2732c61bb05c116c5bed0041948dacaf1fba
 	@RequestMapping(value = "addGoal", method = RequestMethod.GET)
 	public String addGoal(Model model) {
 		Goal goal = new Goal();
@@ -65,6 +68,11 @@ public class GoalController {
 		
 		model.addAttribute("goalReports", goalReports);
 		
+<<<<<<< HEAD
 		return "getGoalReports";
+=======
+		return "redirect:index.jsp";
+>>>>>>> 4cba2732c61bb05c116c5bed0041948dacaf1fba
 	}
+	
 }

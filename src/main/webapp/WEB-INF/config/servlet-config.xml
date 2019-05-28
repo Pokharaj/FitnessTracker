@@ -13,7 +13,11 @@
 	<mvc:resources location="/assets/" mapping="/assets/**"/>
 	<mvc:resources location="/pdfs/" mapping="/pdfs/**"/>
 	
+<<<<<<< HEAD
 	<context:component-scan base-package="com.pluralsight.controller"/>
+=======
+	<context:component-scan base-package="com.pluralsight"/>
+>>>>>>> 4cba2732c61bb05c116c5bed0041948dacaf1fba
 	
 	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<property name="order" value="1" />

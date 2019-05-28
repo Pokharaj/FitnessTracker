@@ -1,5 +1,6 @@
 package com.pluralsight.model;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +25,16 @@ import org.hibernate.validator.constraints.Range;
 	@NamedQuery(name=Goal.FIND_ALL_GOALS, query="Select g from Goal g")			
 	
 })
+=======
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.validator.constraints.Range;
+
+
+@Entity
+>>>>>>> 4cba2732c61bb05c116c5bed0041948dacaf1fba
 public class Goal {
 	
 	public static final String FIND_ALL_GOALS = "findAllGoals";
@@ -34,8 +45,16 @@ public class Goal {
 	@Column(name="GOAL_ID")
 	private Long id;
 
+<<<<<<< HEAD
 	@Range(min = 1, max = 120)
 	@Column(name="MINUTES")
+=======
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	@Range(min = 1, max = 120)
+>>>>>>> 4cba2732c61bb05c116c5bed0041948dacaf1fba
 	private int minutes;
 	
 	@OneToMany(mappedBy="goal", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
@@ -47,6 +66,14 @@ public class Goal {
 
 	public Long getId() {
 		return id;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public int getMinutes() {
@@ -64,5 +91,9 @@ public class Goal {
 	public void setMinutes(int minutes) {
 		this.minutes = minutes;
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 4cba2732c61bb05c116c5bed0041948dacaf1fba
 }

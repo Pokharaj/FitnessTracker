@@ -2,7 +2,10 @@ package com.pluralsight.controller;
 
 import java.util.List;
 
+<<<<<<< HEAD
 import javax.servlet.http.HttpSession;
+=======
+>>>>>>> 4cba2732c61bb05c116c5bed0041948dacaf1fba
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +18,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.pluralsight.model.Activity;
 import com.pluralsight.model.Exercise;
+<<<<<<< HEAD
 import com.pluralsight.model.Goal;
+=======
+>>>>>>> 4cba2732c61bb05c116c5bed0041948dacaf1fba
 import com.pluralsight.service.ExerciseService;
 
 
@@ -32,7 +38,11 @@ public class MinutesController {
 	}
 	
 	@RequestMapping(value = "/addMinutes",  method = RequestMethod.POST)
+<<<<<<< HEAD
 	public String addMinutes(@Valid @ModelAttribute ("exercise") Exercise exercise, HttpSession session, BindingResult result) {
+=======
+	public String addMinutes(@Valid @ModelAttribute ("exercise") Exercise exercise, BindingResult result) {
+>>>>>>> 4cba2732c61bb05c116c5bed0041948dacaf1fba
 		
 		System.out.println("exercise: " + exercise.getMinutes());
 		System.out.println("exercise activity: " + exercise.getActivity());
@@ -40,12 +50,15 @@ public class MinutesController {
 		if(result.hasErrors()) {
 			return "addMinutes";
 		}
+<<<<<<< HEAD
 		else {
 			Goal goal = (Goal)session.getAttribute("goal"); 
 			
 			exercise.setGoal(goal);
 			exerciseService.save(exercise);
 		}
+=======
+>>>>>>> 4cba2732c61bb05c116c5bed0041948dacaf1fba
 		
 		return "addMinutes";
 	}
